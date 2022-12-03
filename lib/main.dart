@@ -13,7 +13,6 @@ class _MyAppState extends State<MyApp> {
   TextEditingController? mycontroller;
   @override
   void initState() {
-    // TODO: implement initState
     mycontroller = TextEditingController();
     super.initState();
   }
@@ -25,8 +24,10 @@ class _MyAppState extends State<MyApp> {
             body:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
       TextField(
-        controller: mycontroller,
-      )
+          controller: mycontroller,
+          onChanged: (value) {
+            print(mycontroller);
+          })
     ])));
   }
 }
